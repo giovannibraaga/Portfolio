@@ -1,6 +1,9 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Link from "next/link";
 import NavLink from "./NavLink";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 
 const navLinks = [
   {
@@ -18,13 +21,26 @@ const navLinks = [
 ];
 
 const Navbar = () => {
+  const [navbarOpen, setNavbarOpen] = useState(false);
   return (
     <nav className="fixed top-0 left-0 right-0 z-10 bg-[#181c21] opacity-95">
-      <div className="flex flex-wrap items-center justify-between mx-auto p-8 ">
-        <Link href={"/"} className="text-2xl md:text-5xl text-white font-semibold">
+      <div className="flex flex-wrap items-center justify-between mx-auto p-4">
+        <Link
+          href={"/"}
+          className="text-2xl md:text-5xl text-white font-semibold"
+        >
           GIOVANNI
         </Link>
-        <div className="menu block md:w-auto" id="navbar">
+        <div className="mobile-menu block md:hidden">
+          {navbarOpen ? (
+            <button className="flex items-center text-slate-200">
+              <Bars3Icon className="h-5 w-5" />
+            </button>
+          ) : (
+            <button></button>
+          )}
+        </div>
+        <div className="menu hidden  md:block md:w-auto" id="navbar">
           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 nt-10">
             {navLinks.map((link, index) => (
               <li key={index}>
