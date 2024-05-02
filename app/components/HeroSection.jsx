@@ -16,16 +16,16 @@ const HeroSection = () => {
             </span>
             <br />
             <TypeAnimation
-              sequence={["Giovanni", 1000, "Giovanni", 1000]}
+              sequence={["Giovanni", 1000, "a Web Developer", 1000]}
               wrapper="span"
-              speed={50}
+              speed={1}
               repeat={Infinity}
             />
           </h1>
           <ul className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
             <li>Information Systems student at FIAP</li>
             <li>Passionated with technology</li>
-            <li>C1 English Level</li>
+            <li>C1 Advanced English Level</li>
           </ul>
           <div>
             <Link
