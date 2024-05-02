@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -27,9 +28,15 @@ const HeroSection = () => {
             <li>C1 English Level</li>
           </ul>
           <div>
-            <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-green-600 via-green-400 to-green-200 hover:bg-slate-200 text-white font-bold">
-              LinkedIn
-            </button>
+            <Link
+              href="https://www.linkedin.com/in/giovannibraga"
+              target="_blank"
+            >
+              <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-green-600 via-green-400 to-green-200 hover:bg-slate-200 text-white font-bold">
+                LinkedIn
+              </button>
+            </Link>
+
             <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-transparent bg-gradient-to-br from-green-600 via-green-400 to-green-200 hover:bg-slate-800 text-white mt-3 font-bold">
               <span className="block bg-[#22272E] hover:bg-[#31373f] rounded-full px-5 py-2">
                 Download CV
