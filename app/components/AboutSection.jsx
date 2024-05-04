@@ -15,14 +15,14 @@ const TAB_DATA = [
         <li>Next.js</li>
         <li>TailwindCss</li>
         <li>Java</li>
-        <li>Spring Boot</li>
         <li>SQL</li>
+        <li>Git</li>
       </ul>
     ),
   },
   {
     title: "Soft Skills",
-    id: "hardSkills",
+    id: "softSkills",
     content: (
       <ul>
         <li>Teamwork</li>
@@ -38,7 +38,7 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul>
-        <li>Information Systems - FIAP (2023-2026)</li>
+        <li>Faculdade de Informática e Administração Paulista - (2023-2026)</li>
       </ul>
     ),
   },
@@ -47,8 +47,8 @@ const TAB_DATA = [
     id: "experience",
     content: (
       <ul>
-        <li>Administration - 3s Sistems (2020-2024)</li>
-        <li>Deplhi Software Engineer - 3s Sistems(2024-Current)</li>
+        <li>Administration - 3s Sistems - (2020-2024)</li>
+        <li>Deplhi Software Engineer - 3s Sistems - (2024-Current)</li>
       </ul>
     ),
   },
@@ -70,10 +70,10 @@ const AboutSection = () => {
         <Image
           alt="A guy with a macbook coding"
           src="/images/coding.png"
-          width={400}
-          height={400}
+          width={500}
+          height={500}
         />
-        <div>
+        <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
             I am currently a third-semester Information Systems student at FIAP,
@@ -109,6 +109,9 @@ const AboutSection = () => {
             >
               Experience{" "}
             </TabButton>
+          </div>
+          <div className="mt-8 ">
+            {TAB_DATA.find((t) => t.id === tab).content}
           </div>
         </div>
       </div>
