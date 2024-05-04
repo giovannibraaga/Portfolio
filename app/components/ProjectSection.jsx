@@ -8,6 +8,8 @@ const projectsData = [
     description:
       "Next.js dashboard project. Using React, Next.js, Postgres, API's, login methods...",
     image: "/images/projects/acme.png",
+    widht: "450px",
+    height:"280px",
     github: "https://github.com/giovannibraaga/Acme",
     preview: "https://acmeproject.vercel.app/dashboard",
     tag: ["All", "Web"],
@@ -18,6 +20,8 @@ const projectsData = [
     description:
       "Made with HTML, Css, Bootstrap. A college project to make a showroom of our Robot, 'Pitchulinho'.",
     image: "/images/projects/pitchulinho.png",
+    widht: "450px",
+    height:"280px",
     github: "https://github.com/giovannibraaga/Pitchulinho",
     preview: "https://pitchulinho.vercel.app",
     tag: ["All", "Web"],
@@ -55,9 +59,10 @@ const projectsData = [
 
 const ProjectSection = () => {
   return (
-    <div>
-      <h2>My Projects</h2>
-      <div>
+    <div className="pt-5" id="projects">
+    <div className="md:pt-5 md:mt-5">
+      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">My Projects</h2>
+      <div className="grid md:grid-cols-3 gap-8 md:gap-12">
         {projectsData.map((project) => (
           <ProjectsCard
             key={project.id}
@@ -69,6 +74,7 @@ const ProjectSection = () => {
           />
         ))}
       </div>
+    </div>
     </div>
   );
 };

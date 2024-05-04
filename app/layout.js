@@ -7,14 +7,8 @@ export const metadata = {
   icons: {
     icon: [
       {
-        media: "(prefers-color-scheme: light)",
         url: "/images/logoWhite.ico",
         href: "/images/logoWhite.ico",
-      },
-      {
-        media: "(prefers-color-scheme: dark)",
-        url: "/images/favicon.ico",
-        href: "/images/favicon.ico",
       },
     ],
   },

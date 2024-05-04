@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
@@ -24,13 +25,13 @@ const navLinks = [
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   return (
-    <nav className="fixed top-0 left-0 right-0 z-10 bg-[#181c21] opacity-95">
-      <div className="flex flex-wrap items-center justify-between mx-auto p-4">
+    <nav className="fixed mx-auto top-0 left-0 right-0 z-10 bg-[#181c21] bg-opacity-80">
+      <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
         <Link
-          href={"/"}
+          href={""}
           className="text-2xl md:text-5xl text-white font-semibold"
         >
-          GIOVANNI
+          <Image alt="Giovanni Site Logo" src="/images/logoWhite.png" width={50} height={50} />
         </Link>
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
