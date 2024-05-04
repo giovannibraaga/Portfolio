@@ -9,7 +9,7 @@ const TAB_DATA = [
     title: "Hard Skills",
     id: "hardSkills",
     content: (
-      <ul>
+      <ul className="list-disc pl-2">
         <li>JavaScript</li>
         <li>React</li>
         <li>Next.js</li>
@@ -24,7 +24,7 @@ const TAB_DATA = [
     title: "Soft Skills",
     id: "softSkills",
     content: (
-      <ul>
+      <ul className="list-disc pl-2">
         <li>Teamwork</li>
         <li>Communication</li>
         <li>Problem-solving</li>
@@ -37,7 +37,7 @@ const TAB_DATA = [
     title: "Education",
     id: "education",
     content: (
-      <ul>
+      <ul className="list-disc pl-2">
         <li>Faculdade de Informática e Administração Paulista - (2023-2026)</li>
       </ul>
     ),
@@ -46,7 +46,7 @@ const TAB_DATA = [
     title: "experience",
     id: "experience",
     content: (
-      <ul>
+      <ul className="list-disc pl-2">
         <li>Administration - 3s Sistems - (2020-2024)</li>
         <li>Deplhi Software Engineer - 3s Sistems - (2024-Current)</li>
       </ul>
@@ -84,7 +84,7 @@ const AboutSection = () => {
             including a notable stint at RoboCup, where I developed critical
             teamwork and technical skills.
           </p>
-          <div className="flex flex-row mt-8">
+          <div className="flex flex-row justify-start mt-8">
             <TabButton
               selectTab={() => handleTabChange("hardSkills")}
               active={tab === "hardSkills"}
