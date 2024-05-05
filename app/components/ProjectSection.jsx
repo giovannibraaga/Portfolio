@@ -15,7 +15,7 @@ const projectsData = [
     height: "280px",
     github: "https://github.com/giovannibraaga/Acme",
     preview: "https://acmeproject.vercel.app/dashboard",
-    tag: ["All", "Web"],
+    tag: ["All", "Web", "API"],
   },
   {
     id: 2,
@@ -33,7 +33,7 @@ const projectsData = [
     id: 3,
     title: "PassIn",
     description:
-      "Java Project develop with Spring Boot, HyperSQLDB, developing API's",
+      "Java Project develop with Spring Boot, HyperSQLDB, developing API's.",
     image: "/images/projects/passin.png",
     github: "https://github.com/giovannibraaga/PassIn",
     preview: "https://github.com/giovannibraaga/PassIn",
@@ -43,11 +43,11 @@ const projectsData = [
     id: 4,
     title: "GiGPT",
     description:
-      "Typescript and React project using ChatGpt API to integrate the AI with the project. Upload a local video, and then, the ai will generate a title, description and hashtags for your video. Soon will updato to GPT-4 👀",
+      "Typescript and React project using ChatGpt API to integrate the AI with the project. Upload a local video, and the AI will generate a title, description and hashtags for your video",
     image: "/images/projects/gigpt.png",
     github: "https://github.com/giovannibraaga/GiGPT",
     preview: "https://rauschgpt.vercel.app/",
-    tag: ["All", "Web"],
+    tag: ["All", "Web", "API"],
   },
   {
     id: 5,
@@ -61,6 +61,15 @@ const projectsData = [
 ];
 
 const ProjectSection = () => {
+  const [tag, setTag] = useState("All");
+  const handleTagChange = (newTag) => {
+    setTag(newTag);
+  };
+
+  const filteredProject = projectsData.filter((project) =>
+    project.tag.includes(tag)
+  );
+
   return (
     <div className="pt-5" id="projects">
       <div className="md:pt-5 md:mt-5">
@@ -68,18 +77,24 @@ const ProjectSection = () => {
           My Projects
         </h2>
         <div className="text-white flex flex-row justify-center items-center gap-2 py-6 ">
-          <button className="rounded-full border-2 border-green-500 px-6 py-3 text-xl cursor-pointer">
-            All
-          </button>
-          <button className="rounded-full border-2 border-slate-600 hover:border-white px-6 py-3 text-xl cursor-pointer">
-            Web
-          </button>
-          <button className="rounded-full border-2 border-slate-600 hover:border-white px-6 py-3 text-xl cursor-pointer">
-            API
-          </button>
+          <ProjectButtons
+            onClick={handleTagChange}
+            name="All"
+            isSelected={tag === "All"}
+          />
+          <ProjectButtons
+            onClick={handleTagChange}
+            name="Web"
+            isSelected={tag === "Web"}
+          />
+          <ProjectButtons
+            onClick={handleTagChange}
+            name="API"
+            isSelected={tag === "API"}
+          />
         </div>
         <div className="grid md:grid-cols-3 gap-8 md:gap-12">
-          {projectsData.map((project) => (
+          {filteredProject.map((project) => (
             <ProjectsCard
               key={project.id}
               title={project.title}
