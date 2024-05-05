@@ -1,5 +1,8 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import ProjectsCard from "./ProjectsCard";
+import ProjectButtons from "./ProjectButtons";
 
 const projectsData = [
   {
@@ -34,7 +37,7 @@ const projectsData = [
     image: "/images/projects/passin.png",
     github: "https://github.com/giovannibraaga/PassIn",
     preview: "https://github.com/giovannibraaga/PassIn",
-    tag: ["All", "Web"],
+    tag: ["All", "API"],
   },
   {
     id: 4,
@@ -64,6 +67,17 @@ const ProjectSection = () => {
         <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
           My Projects
         </h2>
+        <div className="text-white flex flex-row justify-center items-center gap-2 py-6 ">
+          <button className="rounded-full border-2 border-green-500 px-6 py-3 text-xl cursor-pointer">
+            All
+          </button>
+          <button className="rounded-full border-2 border-slate-600 hover:border-white px-6 py-3 text-xl cursor-pointer">
+            Web
+          </button>
+          <button className="rounded-full border-2 border-slate-600 hover:border-white px-6 py-3 text-xl cursor-pointer">
+            API
+          </button>
+        </div>
         <div className="grid md:grid-cols-3 gap-8 md:gap-12">
           {projectsData.map((project) => (
             <ProjectsCard
