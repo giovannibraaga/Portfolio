@@ -11,8 +11,6 @@ const projectsData = [
     description:
       "Next.js dashboard project. Using React, Next.js, Postgres, API's, login methods...",
     image: "/images/projects/acme.png",
-    widht: "450px",
-    height: "280px",
     github: "https://github.com/giovannibraaga/Acme",
     preview: "https://acmeproject.vercel.app/dashboard",
     tag: ["All", "Web", "API"],
@@ -23,8 +21,6 @@ const projectsData = [
     description:
       "Made with HTML, Css, Bootstrap. A college project to make a showroom of our Robot, 'Pitchulinho'.",
     image: "/images/projects/pitchulinho.png",
-    widht: "450px",
-    height: "280px",
     github: "https://github.com/giovannibraaga/Pitchulinho",
     preview: "https://pitchulinho.vercel.app",
     tag: ["All", "Web"],
@@ -43,7 +39,7 @@ const projectsData = [
     id: 4,
     title: "GiGPT",
     description:
-      "Typescript and React project using ChatGpt API to integrate the AI with the project. Upload a local video, and the AI will generate a title, description and hashtags for your video",
+      "Typescript and React project using ChatGpt API to integrate the AI with the project. Upload a local video, and the AI will generate a title, description and hashtags for your video.",
     image: "/images/projects/gigpt.png",
     github: "https://github.com/giovannibraaga/GiGPT",
     preview: "https://rauschgpt.vercel.app/",
@@ -52,10 +48,19 @@ const projectsData = [
   {
     id: 5,
     title: "Habits",
-    description: "Habit tracker made with JavaScript, HTML and Css",
+    description: "Habit tracker made with JavaScript, HTML and Css.",
     image: "/images/projects/habits.png",
     github: "https://github.com/giovannibraaga/Habits",
     preview: "https://habitss.vercel.app/",
+    tag: ["All", "Web"],
+  },
+  {
+    id: 6,
+    title: "SzOnTop",
+    description: "React site to organize 'Valorant' teams.",
+    image: "/images/projects/szontop.png",
+    github: "https://github.com/giovannibraaga/SzonTop",
+    preview: "https://szontop.vercel.app/",
     tag: ["All", "Web"],
   },
 ];
