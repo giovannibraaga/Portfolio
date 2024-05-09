@@ -57,7 +57,7 @@ const projectsData = [
   {
     id: 6,
     title: "Rausch.ai API",
-    description: "API to integrate chatGPT to my application.",
+    description: "API to integrate ChatGPT to my application, made with Typescript, Prisma and used Fastify and zod.",
     image: "/images/projects/rausch-api.png",
     github: "https://github.com/giovannibraaga/rausch.ai-api",
     preview: 'https://github.com/giovannibraaga/rausch.ai-api',
