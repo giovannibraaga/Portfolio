@@ -13,7 +13,7 @@ const projectsData = [
     image: "/images/projects/acme.png",
     github: "https://github.com/giovannibraaga/Acme",
     preview: "https://acmeproject.vercel.app/dashboard",
-    tag: ["All", "Web", "API"],
+    tag: ["All", "Front-End", "Back-End"],
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const projectsData = [
     image: "/images/projects/pitchulinho.png",
     github: "https://github.com/giovannibraaga/Pitchulinho",
     preview: "https://pitchulinho.vercel.app",
-    tag: ["All", "Web"],
+    tag: ["All", "Front-End"],
   },
   {
     id: 3,
@@ -33,17 +33,17 @@ const projectsData = [
     image: "/images/projects/passin.png",
     github: "https://github.com/giovannibraaga/PassIn",
     preview: "https://github.com/giovannibraaga/PassIn",
-    tag: ["All", "API"],
+    tag: ["All", "Back-End"],
   },
   {
     id: 4,
     title: "GiGPT",
     description:
       "Typescript and React project using ChatGpt API to integrate the AI with the project. Upload a local video, and the AI will generate a title, description and hashtags for your video.",
-    image: "/images/projects/gigpt.png",
-    github: "https://github.com/giovannibraaga/GiGPT",
-    preview: "https://rauschgpt.vercel.app/",
-    tag: ["All", "Web", "API"],
+    image: "/images/projects/rausch-ai.png",
+    github: "https://github.com/giovannibraaga/rausch.ai",
+    preview: "https://rauschai.vercel.app/",
+    tag: ["All", "Front-End"],
   },
   {
     id: 5,
@@ -52,16 +52,16 @@ const projectsData = [
     image: "/images/projects/habits.png",
     github: "https://github.com/giovannibraaga/Habits",
     preview: "https://habitss.vercel.app/",
-    tag: ["All", "Web"],
+    tag: ["All", "Front-End"],
   },
   {
     id: 6,
-    title: "SzOnTop",
-    description: "React site to organize 'Valorant' teams.",
-    image: "/images/projects/szontop.png",
-    github: "https://github.com/giovannibraaga/SzonTop",
-    preview: "https://szontop.vercel.app/",
-    tag: ["All", "Web"],
+    title: "Rausch.ai API",
+    description: "API to integrate chatGPT to my application.",
+    image: "/images/projects/rausch-api.png",
+    github: "https://github.com/giovannibraaga/rausch.ai-api",
+    preview: 'https://github.com/giovannibraaga/rausch.ai-api',
+    tag: ["All", "Back-End"],
   },
 ];
 
@@ -89,13 +89,13 @@ const ProjectSection = () => {
           />
           <ProjectButtons
             onClick={handleTagChange}
-            name="Web"
-            isSelected={tag === "Web"}
+            name="Front-End"
+            isSelected={tag === "Front-End"}
           />
           <ProjectButtons
             onClick={handleTagChange}
-            name="API"
-            isSelected={tag === "API"}
+            name="Back-End"
+            isSelected={tag === "Back-End"}
           />
         </div>
         <div className="grid md:grid-cols-3 gap-8 md:gap-12">
