@@ -1,4 +1,4 @@
-import { leagueSpartan } from "@/app/ui/fonts";
+import { leagueSpartan } from "./ui/fonts";
 import "./globals.css";
 
 export const metadata = {
