@@ -27,7 +27,7 @@ const projectsData = [
   },
   {
     id: 3,
-    title: "PassIn",
+    title: "passIn",
     description:
       "Java Project develop with Spring Boot, HyperSQLDB, developing API's.",
     image: "/images/projects/passin.png",
@@ -37,7 +37,7 @@ const projectsData = [
   },
   {
     id: 4,
-    title: "GiGPT",
+    title: "rausch.ai",
     description:
       "Typescript and React project using ChatGpt API to integrate the AI with the project. Upload a local video, and the AI will generate a title, description and hashtags for your video.",
     image: "/images/projects/rausch-ai.png",
@@ -56,7 +56,7 @@ const projectsData = [
   },
   {
     id: 6,
-    title: "Rausch.ai API",
+    title: "rausch.ai API",
     description: "API to integrate ChatGPT to my application, made with Typescript, Prisma and used Fastify and zod.",
     image: "/images/projects/rausch-api.png",
     github: "https://github.com/giovannibraaga/rausch.ai-api",

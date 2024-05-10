@@ -13,7 +13,7 @@ const TAB_DATA = [
         <li>JavaScript</li>
         <li>React</li>
         <li>Next.js</li>
-        <li>TailwindCss</li>
+        <li>Typescript</li>
         <li>Java</li>
         <li>SQL</li>
         <li>Git</li>
