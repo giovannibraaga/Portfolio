@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar.jsx";
 import ProjectSection from "./components/ProjectSection.jsx";
 import EmailSection from "./components/EmailSection.jsx";
 import Footer from "./components/Footer.jsx";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <EmailSection />
       </div>
       <Footer />
+      <SpeedInsights />
     </main>
   );
 }
